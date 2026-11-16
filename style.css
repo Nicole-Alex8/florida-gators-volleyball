@@ -103,6 +103,14 @@ main {
   background-color: #f1f5f9;
 }
 
+@media screen and (max-width: 600px) {
+  .schedule__heading,
+  .schedule__cell {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
 /* !! orange color from UF's website not sure where to put this yet !!*/ 
 h2 {
     color: #fa4616
