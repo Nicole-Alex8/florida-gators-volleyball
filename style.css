@@ -76,25 +76,30 @@ main {
 }
 
 /* Schedule Table */
-table {
+.schedule {
   width: 100%;
   border-collapse: collapse;
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-th, td {
+.schedule__heading,
+.schedule__cell {
   padding: 12px 15px;
   text-align: left;
   border-bottom: 1px solid #dddddd;
 }
 
-th {
+.schedule__heading {
   background-color: #6f89a9;
   color: white;
 }
 
-tr:hover {
+.schedule__row {
+  transition: background-color 0.3s ease;
+}
+
+.schedule__row:hover {
   background-color: #f1f5f9;
 }
 
