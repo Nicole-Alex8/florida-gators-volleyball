@@ -8,7 +8,7 @@ body {
 
 /* Header & Top-Right Navigation (Flexbox) */
 header {
-  background-color: #0275ff; /* Blue from UF's website */
+  background-color: #0021a5; /* Blue from UF's website */
   color: white;
   padding: 15px 30px;
   display: flex;
@@ -71,7 +71,7 @@ main {
 
 .player-card p {
   margin: 4px 0;
-  color: #0275ff;
+  color: #0021a5;
   font-size: 14px;
 }
 
@@ -121,7 +121,7 @@ h2 {
 
 /* Hero Section */
 .hero {
-  background-color: #0275ff;
+  background-color: #0021a5;
   color: white;
   text-align: center;
   padding: 80px 30px;
@@ -158,16 +158,21 @@ h2 {
 
 /* About Section */
 .about {
+  margin: 30px 0;
+}
+
+.about__card {
   background-color: white;
   padding: 30px;
-  margin: 30px 0;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .about__description {
   line-height: 1.8;
+  margin: 0;
 }
+
 
 /* Explore Section */
 .explore {
@@ -193,7 +198,7 @@ h2 {
 }
 
 .explore__card-title {
-  color: #0275ff;
+  color: #0021a5;
 }
 
 .explore__card-description {
@@ -202,7 +207,7 @@ h2 {
 
 .explore__link {
   display: inline-block;
-  color: #0275ff;
+  color: #0021a5;
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -214,7 +219,7 @@ h2 {
 
 /* Footer */
 .footer {
-  background-color: #0275ff;
+  background-color: #0021a5;
   color: white;
   text-align: center;
   padding: 20px;
@@ -264,7 +269,7 @@ h2 {
     padding: 60px 20px;
   }
 }
-
+ 
 /* Mobile Responsive Styles */
 @media (max-width: 480px) {
   .explore__container {
@@ -280,9 +285,19 @@ h2 {
   }
 
   .about {
+    padding: 0;
+  }
+
+  .about__card {
     padding: 20px;
   }
+
+  .about__description {
+    font-size: 15px;
+    line-height: 1.6;
+  }
 }
+
 
 /* Accessibility: Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
@@ -365,4 +380,55 @@ h2 {
 .header__title {
     font-size: 24px;
     margin: 0;
+}
+
+
+/* Volleyball Stats Section */
+.stats {
+  margin: 30px 0;
+}
+
+.stats__container {
+  display: flex;
+  gap: 15px;
+}
+
+.stats__card {
+  flex: 1;
+  background-color: #0021a5;
+  padding: 25px 15px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stats__number {
+  color: white;
+  font-size: 32px;
+  margin: 0 0 10px;
+}
+
+.stats__label {
+  color: white;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Mobile Stats Layout */
+@media (max-width: 480px) {
+  .stats__container {
+    gap: 8px;
+  }
+
+  .stats__card {
+    padding: 15px 5px;
+  }
+
+  .stats__number {
+    font-size: 24px;
+  }
+
+  .stats__label {
+    font-size: 12px;
+  }
 }
