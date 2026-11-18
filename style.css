@@ -97,6 +97,16 @@ main {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .schedule {
+    animation: none;
+  }
+
+  .schedule__row {
+    transition: none;
+  }
+}
+
 .schedule__heading,
 .schedule__cell {
   padding: 12px 15px;
