@@ -1,3 +1,8 @@
+/* !! orange color from UF's web not sure where to put yet DELETE BEFORE SUBMISSION */ 
+h2 {
+    color: #fa4616
+}
+
 /* Basic Page Setup */
 body {
   font-family: Arial, sans-serif;
@@ -45,6 +50,7 @@ main {
 .roster-container {
   display: flex;
   flex-wrap: wrap; /* Drops cards to the next line if screen is narrow */
+  justify-content: center; /* Centers the cards horizontally */
   gap: 20px;
 }
 
@@ -53,6 +59,7 @@ main {
   border-radius: 8px;
   padding: 15px;
   width: 220px;
+  box-sizing: border-box;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -110,12 +117,6 @@ main {
     font-size: 14px;
   }
 }
-
-/* !! orange color from UF's website not sure where to put this yet !!*/ 
-h2 {
-    color: #fa4616
-}
-
 
 /* Homepage Styles */
 
@@ -365,4 +366,23 @@ h2 {
 .header__title {
     font-size: 24px;
     margin: 0;
+}
+
+/* Roster Page Layout */
+.roster-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.roster-page main {
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 30px auto 0;
+}
+
+/* Roster Page Width */
+.roster-page main {
+  max-width: 1400px;
 }
