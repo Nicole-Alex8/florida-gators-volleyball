@@ -86,6 +86,12 @@ main {
   animation: slideIn 0.6s ease-out;
 }
 
+.schedule caption {
+  text-align: left;
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
 @keyframes slideIn {
   from {
     opacity: 0;
@@ -127,10 +133,28 @@ main {
   background-color: #f1f5f9;
 }
 
-.schedule__cell--win {
-  color: #2e7d32;
+.schedule__badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  color: white;
   font-weight: bold;
 }
+
+.schedule__badge--win {
+  background-color: #2e7d32;
+}
+
+.schedule__badge--upcoming {
+  background-color: #fa4616;
+}
+
+.schedule__row--upcoming {
+  background-color: #fff3ee;
+  border-left: 4px solid #fa4616;
+  font-weight: bold;
+}
+
 
 .schedule__logo {
   width: 80px;
