@@ -81,6 +81,36 @@ main {
   border-collapse: collapse;
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  animation: slideIn 0.6s ease-out;
+}
+
+.schedule caption {
+  text-align: left;
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .schedule {
+    animation: none;
+  }
+
+  .schedule__row {
+    transition: none;
+  }
 }
 
 .schedule__heading,
@@ -91,7 +121,7 @@ main {
 }
 
 .schedule__heading {
-  background-color: #6f89a9;
+  background-color: #0275ff;
   color: white;
 }
 
@@ -103,11 +133,45 @@ main {
   background-color: #f1f5f9;
 }
 
+.schedule__badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+}
+
+.schedule__badge--win {
+  background-color: #2e7d32;
+}
+
+.schedule__badge--upcoming {
+  background-color: #fa4616;
+}
+
+.schedule__row--upcoming {
+  background-color: #fff3ee;
+  border-left: 4px solid #fa4616;
+  font-weight: bold;
+}
+
+
+.schedule__logo {
+  width: 80px;
+  height: 80px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
 @media screen and (max-width: 600px) {
   .schedule__heading,
   .schedule__cell {
     padding: 8px;
     font-size: 14px;
+  }
+  
+  .schedule {
+    display: block;
+    overflow-x: auto;
   }
 }
 
