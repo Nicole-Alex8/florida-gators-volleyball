@@ -13,7 +13,7 @@ body {
 
 /* Header & Top-Right Navigation (Flexbox) */
 header {
-  background-color: #0275ff; /* Blue from UF's website */
+  background-color: #0021a5; /* Blue from UF's website */
   color: white;
   padding: 15px 30px;
   display: flex;
@@ -78,7 +78,7 @@ main {
 
 .player-card p {
   margin: 4px 0;
-  color: #0275ff;
+  color: #0021a5;
   font-size: 14px;
 }
 
@@ -88,6 +88,36 @@ main {
   border-collapse: collapse;
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  animation: slideIn 0.6s ease-out;
+}
+
+.schedule caption {
+  text-align: left;
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .schedule {
+    animation: none;
+  }
+
+  .schedule__row {
+    transition: none;
+  }
 }
 
 .schedule__heading,
@@ -98,7 +128,7 @@ main {
 }
 
 .schedule__heading {
-  background-color: #6f89a9;
+  background-color: #0275ff;
   color: white;
 }
 
@@ -110,11 +140,45 @@ main {
   background-color: #f1f5f9;
 }
 
+.schedule__badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+}
+
+.schedule__badge--win {
+  background-color: #2e7d32;
+}
+
+.schedule__badge--upcoming {
+  background-color: #fa4616;
+}
+
+.schedule__row--upcoming {
+  background-color: #fff3ee;
+  border-left: 4px solid #fa4616;
+  font-weight: bold;
+}
+
+
+.schedule__logo {
+  width: 80px;
+  height: 80px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
 @media screen and (max-width: 600px) {
   .schedule__heading,
   .schedule__cell {
     padding: 8px;
     font-size: 14px;
+  }
+  
+  .schedule {
+    display: block;
+    overflow-x: auto;
   }
 }
 
@@ -122,7 +186,7 @@ main {
 
 /* Hero Section */
 .hero {
-  background-color: #0275ff;
+  background-color: #0021a5;
   color: white;
   text-align: center;
   padding: 80px 30px;
@@ -159,16 +223,21 @@ main {
 
 /* About Section */
 .about {
+  margin: 30px 0;
+}
+
+.about__card {
   background-color: white;
   padding: 30px;
-  margin: 30px 0;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .about__description {
   line-height: 1.8;
+  margin: 0;
 }
+
 
 /* Explore Section */
 .explore {
@@ -194,7 +263,7 @@ main {
 }
 
 .explore__card-title {
-  color: #0275ff;
+  color: #0021a5;
 }
 
 .explore__card-description {
@@ -203,7 +272,7 @@ main {
 
 .explore__link {
   display: inline-block;
-  color: #0275ff;
+  color: #0021a5;
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -215,7 +284,7 @@ main {
 
 /* Footer */
 .footer {
-  background-color: #0275ff;
+  background-color: #0021a5;
   color: white;
   text-align: center;
   padding: 20px;
@@ -265,7 +334,7 @@ main {
     padding: 60px 20px;
   }
 }
-
+ 
 /* Mobile Responsive Styles */
 @media (max-width: 480px) {
   .explore__container {
@@ -281,9 +350,19 @@ main {
   }
 
   .about {
+    padding: 0;
+  }
+
+  .about__card {
     padding: 20px;
   }
+
+  .about__description {
+    font-size: 15px;
+    line-height: 1.6;
+  }
 }
+
 
 /* Accessibility: Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
@@ -385,4 +464,54 @@ main {
 /* Roster Page Width */
 .roster-page main {
   max-width: 1400px;
+}
+
+/* Volleyball Stats Section */
+.stats {
+  margin: 30px 0;
+}
+
+.stats__container {
+  display: flex;
+  gap: 15px;
+}
+
+.stats__card {
+  flex: 1;
+  background-color: #0021a5;
+  padding: 25px 15px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stats__number {
+  color: white;
+  font-size: 32px;
+  margin: 0 0 10px;
+}
+
+.stats__label {
+  color: white;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Mobile Stats Layout */
+@media (max-width: 480px) {
+  .stats__container {
+    gap: 8px;
+  }
+
+  .stats__card {
+    padding: 15px 5px;
+  }
+
+  .stats__number {
+    font-size: 24px;
+  }
+
+  .stats__label {
+    font-size: 12px;
+  }
 }
