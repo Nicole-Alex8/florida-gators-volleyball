@@ -127,7 +127,7 @@ h2 {
 }
 
 .schedule__heading {
-  background-color: #0275ff;
+  background-color: #0021a5;
   color: white;
 }
 
@@ -155,12 +155,32 @@ h2 {
   background-color: #fa4616;
 }
 
+.schedule__badge--home {
+  background-color: #0021a5;
+}
+
+.schedule__badge--away {
+  background-color: #6b7280;
+}
+
 .schedule__row--upcoming {
   background-color: #fff3ee;
   border-left: 4px solid #fa4616;
   font-weight: bold;
 }
 
+/* Schedule Page Layout (keeps footer at the bottom) */
+.schedule-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule-page main {
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
 
 .schedule__logo {
   width: 80px;
@@ -168,6 +188,7 @@ h2 {
   vertical-align: middle;
   margin-right: 8px;
 }
+
 @media screen and (max-width: 600px) {
   .schedule__heading,
   .schedule__cell {
