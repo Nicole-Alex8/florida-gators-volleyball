@@ -30,7 +30,7 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  color: #ffb703; /* not sure what color to highlight when we hover over the tabs */
+  color: #fa4616; /* changed from golden to UF's orange */
   text-decoration: underline;
 }
 
@@ -45,7 +45,12 @@ main {
 .roster-container {
   display: flex;
   flex-wrap: wrap; /* Drops cards to the next line if screen is narrow */
+  justify-content: center; /* Centers the cards horizontally */
   gap: 20px;
+}
+
+h2 {
+    color: #fa4616 /* UF's orange color */;
 }
 
 .player-card {
@@ -53,8 +58,9 @@ main {
   border-radius: 8px;
   padding: 15px;
   width: 220px;
+  box-sizing: border-box;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(8, 8, 8, 0.877);
 }
 
 .player-card img {
@@ -66,7 +72,7 @@ main {
 
 .player-card h3 {
   margin: 10px 0 5px;
-  color: #6f89a9;
+  color: #fa4616;
 }
 
 .player-card p {
@@ -174,12 +180,6 @@ main {
     overflow-x: auto;
   }
 }
-
-/* !! orange color from UF's website not sure where to put this yet !!*/ 
-h2 {
-    color: #fa4616
-}
-
 
 /* Homepage Styles */
 
@@ -446,6 +446,24 @@ h2 {
     margin: 0;
 }
 
+/* Roster Page Layout */
+.roster-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.roster-page main {
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 30px auto 0;
+}
+
+/* Roster Page Width */
+.roster-page main {
+  max-width: 1400px;
+}
 
 /* Volleyball Stats Section */
 .stats {
