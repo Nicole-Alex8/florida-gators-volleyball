@@ -1,8 +1,3 @@
-/* !! orange color from UF's web not sure where to put yet DELETE BEFORE SUBMISSION */ 
-h2 {
-    color: #fa4616
-}
-
 /* Basic Page Setup */
 body {
   font-family: Arial, sans-serif;
@@ -35,7 +30,7 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  color: #ffb703; /* not sure what color to highlight when we hover over the tabs */
+  color: #fa4616; /* changed from golden to UF's orange */
   text-decoration: underline;
 }
 
@@ -54,6 +49,10 @@ main {
   gap: 20px;
 }
 
+h2 {
+    color: #fa4616 /* UF's orange color */;
+}
+
 .player-card {
   background-color: white;
   border-radius: 8px;
@@ -61,7 +60,7 @@ main {
   width: 220px;
   box-sizing: border-box;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(8, 8, 8, 0.877);
 }
 
 .player-card img {
@@ -73,7 +72,7 @@ main {
 
 .player-card h3 {
   margin: 10px 0 5px;
-  color: #6f89a9;
+  color: #fa4616;
 }
 
 .player-card p {
