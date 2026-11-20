@@ -90,6 +90,21 @@ main {
   box-sizing: border-box;
   text-align: center;
   box-shadow: 0 2px 5px rgba(8, 8, 8, 0.877);
+  transition: background-color 0.3s ease;
+}
+
+/* Player and Coach Card Hover Effect */
+.player-card:hover,
+.coaches-card:hover {
+  background-color: #dce6f2;
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .player-card,
+  .coaches-card {
+    transition: none;
+  }
 }
 
 /* Player and Coach Images */
@@ -114,6 +129,14 @@ main {
   margin: 4px 0;
   color: #0021a5;
   font-size: 14px;
+}
+
+/* Center roster and coaches headings on mobile */
+@media screen and (max-width: 600px) {
+  .roster-page h2,
+  .coaches-section h2 {
+    text-align: center;
+  }
 }
 
 /* Schedule Table */
