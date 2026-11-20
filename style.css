@@ -8,11 +8,13 @@ body {
 
 /* Header & Top-Right Navigation (Flexbox) */
 header {
-  background-color: #0021a5; /* Blue from UF's website */
+  background-color: #0021a5;
+  /* Blue from UF's website */
   color: white;
   padding: 15px 30px;
   display: flex;
-  justify-content: space-between; /* Pushes title left, nav right */
+  justify-content: space-between;
+  /* Pushes title left, nav right */
   align-items: center;
 }
 
@@ -30,7 +32,8 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  color: #fa4616; /* changed from golden to UF's orange */
+  color: #fa4616;
+  /* changed from golden to UF's orange */
   text-decoration: underline;
 }
 
@@ -80,6 +83,10 @@ main {
   margin-top: 30px;
 }
 
+h2 {
+  color: #fa4616;
+}
+
 /* Player and Coach Cards */
 .player-card,
 .coaches-card {
@@ -97,7 +104,8 @@ main {
 .coaches-card img {
   width: 100%;
   height: 220px;
-  object-fit: cover; /* Crops photos cleanly without stretching */
+  object-fit: cover;
+  /* Crops photos cleanly without stretching */
   border-radius: 6px;
 }
 
@@ -138,6 +146,7 @@ main {
     opacity: 0;
     transform: translateX(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -162,7 +171,7 @@ main {
 }
 
 .schedule__heading {
-  background-color: #0275ff;
+  background-color: #0021a5;
   color: white;
 }
 
@@ -187,7 +196,22 @@ main {
 }
 
 .schedule__badge--upcoming {
-  background-color: #fa4616;
+  background-color: #c2410c;
+}
+
+.schedule__badge--home {
+  background-color: #0021a5;
+}
+
+.schedule__badge--away {
+  background-color: #6b7280;
+}
+
+.schedule__badge--home,
+.schedule__badge--away {
+  display: block;
+  width: fit-content;
+  margin-top: 4px;
 }
 
 .schedule__row--upcoming {
@@ -196,6 +220,100 @@ main {
   font-weight: bold;
 }
 
+/* Schedule Page Layout (keeps footer at the bottom) */
+.schedule-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule-page main {
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Schedule Photo Banner */
+.schedule-banner {
+  margin: 0 0 24px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.schedule-banner__image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.schedule-banner__caption {
+  background-color: #0021a5;
+  color: white;
+  font-size: 13px;
+  text-align: right;
+  padding: 8px 15px;
+}
+
+/* Next Match Card */
+.next-match {
+  background-color: #0021a5;
+  color: white;
+  border-left: 6px solid #fa4616;
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+
+.next-match__label {
+  margin: 0 0 12px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffb703;
+}
+
+.next-match__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.next-match__teams {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.next-match__logo {
+  width: 48px;
+  height: 48px;
+}
+
+.next-match__team {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.next-match__vs {
+  font-size: 14px;
+  color: #b5d4f4;
+}
+
+.next-match__date {
+  margin: 0;
+  font-weight: bold;
+}
+
+.next-match__place {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #dbe4ff;
+}
 
 .schedule__logo {
   width: 80px;
@@ -203,16 +321,26 @@ main {
   vertical-align: middle;
   margin-right: 8px;
 }
+
 @media screen and (max-width: 600px) {
   .schedule__heading,
   .schedule__cell {
     padding: 8px;
     font-size: 14px;
   }
-  
+
   .schedule {
     display: block;
     overflow-x: auto;
+  }
+
+  .schedule__logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .schedule-banner__image {
+    height: 200px;
   }
 }
 
@@ -368,7 +496,7 @@ main {
     padding: 60px 20px;
   }
 }
- 
+
 /* Mobile Responsive Styles */
 @media (max-width: 480px) {
   .explore__container {
@@ -410,6 +538,7 @@ main {
     transition: none;
   }
 }
+
 /* Homepage Hero Image */
 .hero {
   padding: 25px 0 40px;
@@ -456,29 +585,30 @@ main {
   padding: 10px 15px;
   border-radius: 0 0 8px 8px;
 }
+
 /* Header Logo Alignment */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .header__logo {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
-    flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .header__title {
-    font-size: 24px;
-    margin: 0;
+  font-size: 24px;
+  margin: 0;
 }
 
 /* Volleyball Stats Section */
