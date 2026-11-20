@@ -61,7 +61,9 @@ main {
 
 /* Roster Page Heading */
 .roster-page h2 {
-  color: #fa4616 /* UF's orange */;
+  color: #fa4616
+    /* UF's orange */
+  ;
 }
 
 /* Roster Page Width */
@@ -73,7 +75,7 @@ main {
 .roster-container,
 .coaches-container {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
@@ -323,6 +325,7 @@ h2 {
 }
 
 @media screen and (max-width: 600px) {
+
   .schedule__heading,
   .schedule__cell {
     padding: 8px;
@@ -659,4 +662,26 @@ h2 {
   .stats__label {
     font-size: 12px;
   }
+}
+
+/* Clickable homepage header */
+.header__home-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header__home-link .header__logo {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.header__home-link .header__title {
+  margin: 0;
+  color: white;
+  text-decoration: none;
 }
