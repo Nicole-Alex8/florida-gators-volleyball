@@ -246,7 +246,7 @@ h2 {
   max-width: 100%;
   height: 300px;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center 5%;
 }
 
 .schedule-banner__caption {
@@ -325,8 +325,8 @@ h2 {
 @media screen and (max-width: 600px) {
   .schedule__heading,
   .schedule__cell {
-    padding: 8px;
-    font-size: 14px;
+    padding: 6px 4px;
+    font-size: 12px;
   }
 
   .schedule {
@@ -335,12 +335,24 @@ h2 {
   }
 
   .schedule__logo {
-    width: 40px;
-    height: 40px;
+    display: block;
+    width: 28px;
+    height: 28px;
+    margin: 0 0 4px;
+  }
+
+  .schedule__badge {
+    padding: 2px 8px;
+    font-size: 11px;
   }
 
   .schedule-banner__image {
     height: 200px;
+  }
+
+  .schedule-page h2,
+  .schedule caption {
+    text-align: center;
   }
 }
 
