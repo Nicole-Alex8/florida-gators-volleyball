@@ -61,7 +61,9 @@ main {
 
 /* Roster Page Heading */
 .roster-page h2 {
-  color: #fa4616 /* UF's orange */;
+  color: #fa4616
+    /* UF's orange */
+  ;
 }
 
 /* Roster Page Width */
@@ -73,7 +75,7 @@ main {
 .roster-container,
 .coaches-container {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
@@ -323,6 +325,7 @@ h2 {
 }
 
 @media screen and (max-width: 600px) {
+
   .schedule__heading,
   .schedule__cell {
     padding: 6px 4px;
@@ -456,16 +459,68 @@ h2 {
   color: #fa4616;
 }
 
+
 /* Footer */
 .footer {
   background-color: #0021a5;
   color: white;
-  text-align: center;
-  padding: 20px;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 .footer__text {
   margin: 0;
+  text-align: left;
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: #fa4616;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.footer__social-link:hover {
+  transform: scale(1.1);
+}
+
+.footer__social-link:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 3px;
+}
+
+/* Mobile Footer */
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__text {
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer__social-link {
+    transition: none;
+  }
 }
 
 /* Homepage Animation */
@@ -511,6 +566,12 @@ h2 {
 
 /* Mobile Responsive Styles */
 @media (max-width: 480px) {
+
+  .about h2,
+  .explore h2 {
+    text-align: center;
+  }
+
   .explore__container {
     flex-direction: column;
   }
@@ -536,7 +597,6 @@ h2 {
     line-height: 1.6;
   }
 }
-
 
 /* Accessibility: Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
@@ -654,21 +714,38 @@ h2 {
   margin: 0;
 }
 
-/* Mobile Stats Layout */
+/* Mobile Responsive Styles */
 @media (max-width: 480px) {
-  .stats__container {
-    gap: 8px;
+  .home-page h2 {
+    text-align: center;
   }
 
-  .stats__card {
-    padding: 15px 5px;
+  .explore__container {
+    flex-direction: column;
   }
 
-  .stats__number {
-    font-size: 24px;
+  .hero__title {
+    font-size: 28px;
   }
 
-  .stats__label {
-    font-size: 12px;
+  /* Clickable homepage header */
+  .header__home-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
   }
-}
+
+  .header__home-link .header__logo {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  .header__home-link .header__title {
+    margin: 0;
+    color: white;
+    text-decoration: none;
+  }
